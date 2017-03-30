@@ -155,7 +155,7 @@ header {
     top: 50%;
     right: 0;
     content: '';
-    background: url("./img/dd.png") no-repeat center center;
+    background: url("/rgooi/img/dd.png") no-repeat center center;
     height: 5px;
     width: 5px;
 }
