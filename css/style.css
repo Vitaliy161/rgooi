@@ -1,26 +1,21 @@
-html,
-body {
+body,html {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Slab', arial, sans-serif;
+    font-family: Roboto Slab,arial,sans-serif;
     font-size: 16px;
-    background: #eee;
+    background: #eee
 }
 
 a {
-    color: #ff344a;
+    color: #ff344a
 }
 
-h1,
-h2,
-h3,
-p,
-span {
-    color: rgba(14, 32, 40, 0.8);
+h1,h2,h3,p,span {
+    color: rgba(14,32,40,.8)
 }
 
 h1 {
-    text-align: center;
+    text-align: center
 }
 
 header {
@@ -28,7 +23,7 @@ header {
     height: auto;
     margin-bottom: 10px;
     background: #fff;
-    background-size: cover;
+    background-size: cover
 }
 
 #tophead {
@@ -39,59 +34,61 @@ header {
     margin: 0 auto;
     background-size: cover;
     height: 150px;
-    background: #B2EBF2;
+    background: #b2ebf2
 }
 
 #tophead img {
     height: 120px;
-    margin: 0 15px;
+    margin: 0 15px
 }
 
 #tophead .logo {
     margin: auto 30px 8px 40px;
-    height: 120px;
+    height: 120px
 }
 
 #tophead p {
     font-size: 1.4rem;
-    margin: auto 15px 45px 15px;
+    margin: auto 15px 45px;
     color: #041720;
     font-style: italic;
-    opacity: 0.6;
+    opacity: .6
 }
 
 #nav {
     position: relative;
-    list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height: 50px;
-    background: #3399cc;
+    background: #39c;
     margin: 0 auto;
     color: #fff;
     font-size: 1.2rem;
-    padding-left: 0;
+    padding-left: 0
+}
+
+#nav,#nav ul {
+    list-style: none
 }
 
 #nav ul {
-    list-style: none;
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background: #fff;
+    background: #fff
 }
 
 #nav ul li {
     text-align: left;
     border-bottom: 1px solid #69d7e5;
-    background: #B2EBF2;
+    background: #b2ebf2
 }
 
 #nav ul li a {
-    padding: 0;
+    padding: 0
 }
 
 #nav li {
@@ -102,35 +99,35 @@ header {
     color: #fff;
     text-decoration: none;
     padding: 0 1vw;
-    cursor: pointer;
+    cursor: pointer
 }
 
-#nav li:hover > ul {
+#nav li:hover>ul {
     display: block;
-    z-index: 99;
-    padding-left: 0px;
-    color: rgba(14, 32, 40, 0.8);
-    width: 250px;
+    z-index: 1;
+    padding-left: 0;
+    color: rgba(14,32,40,.8);
+    width: 250px
 }
 
-#nav li:hover > ul.reportnav {
-    width: 100px;
+#nav li:hover>ul.reportnav {
+    width: 100px
 }
 
-#nav li:hover > ul li {
+#nav li:hover>ul li {
     line-height: 40px;
     padding: 5px 15px;
-    height: 40px;
+    height: 40px
 }
 
-#nav li:hover > ul li:hover {
-    background: #69d7e5;
+#nav li:hover>ul li:hover {
+    background: #69d7e5
 }
 
-#nav li:hover > ul li a {
+#nav li:hover>ul li a {
     display: block;
     font-size: 1rem;
-    color: rgba(14, 32, 40, 0.8);
+    color: rgba(14,32,40,.8)
 }
 
 #nav li a {
@@ -138,107 +135,181 @@ header {
     color: #fff;
     text-decoration: none;
     height: 100%;
-    padding: 0 0;
+    padding: 0
 }
 
-#nav li a:hover {
-    text-decoration: underline;
+#nav li .active,#nav li a:hover {
+    text-decoration: underline
 }
 
-#nav li .active {
-    text-decoration: underline;
-}
-
-#nav .dropdown::after {
+#nav .dropdown:after {
     display: block;
     position: absolute;
     top: 50%;
     right: 0;
-    content: '';
-    background: url("../img/dd.png") no-repeat center center;
+    content: "";
+    background: url(/img/dd.png) no-repeat 50%;
     height: 5px;
-    width: 5px;
+    width: 5px
 }
 
-.dl-wrap,
-.dl-menuwrapper {
-    display: none;
+.dl-menuwrapper,.dl-wrap {
+    display: none
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width:992px) {
     #tophead .k2 {
-        display: none;
+        display: none
     }
 
     #tophead p {
-        font-size: 1.2rem;
+        font-size: 1.2rem
     }
 
     #nav {
-        font-size: 0.98rem;
+        font-size: .98rem
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width:720px) {
     header {
-        margin-bottom: 0;
+        margin-bottom: 0
     }
 
     #tophead .logo {
-        margin: auto 10px 8px 15px;
+        margin: auto 10px 8px 15px
     }
 
     #tophead .k2 {
-        display: block;
+        display: block
     }
 
-    #tophead p {
-        display: none;
+    #nav,#tophead p {
+        display: none
     }
 
-    #nav {
-        display: none;
-    }
-
-    .dl-wrap,
-  .dl-menuwrapper {
-        display: block;
+    .dl-menuwrapper,.dl-wrap {
+        display: block
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width:576px) {
     #tophead {
         justify-content: center;
-        align-items: flex-end;
+        align-items: flex-end
     }
 
     #tophead .logo {
-        margin: auto auto 8px auto;
-        text-align: center;
+        margin: auto auto 8px;
+        text-align: center
     }
 
-    #tophead .k2,
-  #tophead .k1 {
-        display: none;
+    #tophead .k1,#tophead .k2 {
+        display: none
     }
+}
+
+#projects {
+    display: block;
+    width: 100%;
+    background: #fff;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    box-sizing: border-box
+}
+
+#projects #pt-wrap {
+    margin: 0 auto;
+    max-width: 1100px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+#projects #pt-wrap .work {
+    box-sizing: border-box;
+    margin-left: 15px;
+    margin-right: 15px;
+    word-wrap: break-word;
+    margin: 0 5px 20px;
+    width: 200px;
+    height: 200px;
+    display: block
+}
+
+#projects #pt-wrap .work .q {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background: url(../img/m1.jpg);
+    background-size: cover;
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+    border-radius: 3px
+}
+
+#projects #pt-wrap .work .q .hoverdesc {
+    width: 200px;
+    height: 200px;
+    background: rgba(45,45,68,.7);
+    opacity: 0
+}
+
+#projects #pt-wrap .work .q .hoverdesc p {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: absolute;
+    padding: 20px;
+    margin: 0 auto;
+    bottom: 0
+}
+
+#projects #pt-wrap .work .q .hoverdesc p span {
+    color: #ff344a;
+    font-weight: 700
+}
+
+#projects #pt-wrap .work .q:hover .hoverdesc {
+    opacity: 1;
+    -webkit-transition: .5s;
+    transition: .5s
+}
+
+#projects h2 {
+    text-align: center;
+    padding: 10px 0 5px;
+    margin: 0
+}
+
+#projects h2 a {
+    color: rgba(14,32,40,.8);
+    text-decoration: none
+}
+
+#projects h2:hover {
+    text-decoration: none
 }
 
 #main {
-    margin: 20px 0;
+    margin: 20px 0
 }
 
 #wrapper {
     max-width: 1920px;
     margin: 0 auto;
     position: relative;
-    padding: 0 0px;
-    min-height: 400px;
+    padding: 0;
+    min-height: 400px
 }
 
 #content-wrapper {
     float: left;
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
 #content {
@@ -250,30 +321,28 @@ header {
     height: 100%;
     padding: 30px 50px;
     border: 1px solid #ddd;
-    line-height: 30px;
+    line-height: 30px
 }
 
-#content ul,
-#content li {
-    color: rgba(14, 32, 40, 0.8);
+#content li,#content ul {
+    color: rgba(14,32,40,.8)
 }
 
-#content .longname,
-#content .shortname {
-    margin: 0 auto 40px auto;
+#content .longname,#content .shortname {
+    margin: 0 auto 40px
 }
 
 #content .shortname {
-    display: none;
+    display: none
 }
 
 #content h2 {
-    color: rgba(14, 32, 40, 0.8);
-    text-align: center;
+    color: rgba(14,32,40,.8);
+    text-align: center
 }
 
 #content h2 span {
-    color: #ff344a;
+    color: #ff344a
 }
 
 #content .news {
@@ -283,60 +352,60 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px
 }
 
 #content .news img {
     height: 180px;
     padding: 10px;
-    border-radius: 12px;
+    border-radius: 12px
 }
 
 #content .news .news-content {
     height: 200px;
     color: #333;
-    padding: 10px;
+    padding: 10px
 }
 
 #content .news .title {
     display: block;
     margin: 0;
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 1.2rem
 }
 
 #content .news .title a {
     text-decoration: none;
-    color: rgba(14, 32, 40, 0.8);
+    color: rgba(14,32,40,.8)
 }
 
 #content .news .title a:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 #content .news .date {
     display: block;
     color: #888;
     font-size: 1rem;
-    margin: 0px 0 0 0;
+    margin: 0
 }
 
 #content .news .news-text {
     line-height: 25px;
     height: 75px;
-    margin: 10px 0 0 0;
+    margin: 10px 0 0;
     font-size: 1rem;
     overflow: hidden;
-    color: rgba(14, 32, 40, 0.8);
+    color: rgba(14,32,40,.8)
 }
 
 #content .news .next {
     color: #ff344a;
-    text-decoration: none;
+    text-decoration: none
 }
 
 #content .news .next:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 #sidebar {
@@ -351,12 +420,12 @@ header {
     color: #000;
     height: 620px;
     border: 1px solid #ddd;
-    font-size: 1rem;
+    font-size: 1rem
 }
 
 #sidebar .sidebox {
     padding: 30px;
-    text-align: center;
+    text-align: center
 }
 
 #sidebar .sidebox .donate-btn {
@@ -364,105 +433,138 @@ header {
     display: block;
     padding: 15px 10px;
     background: #ff344a;
-    color: white;
+    color: #fff;
     text-decoration: none;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
     font-size: 1.2rem;
     width: 220px;
-    opacity: 0.9;
+    opacity: .9
 }
 
 #sidebar .sidebox .donate-btn:hover {
     opacity: 1;
-    transition: .3s;
+    transition: .3s
 }
 
 #sidebar h2 {
-    color: rgba(14, 32, 40, 0.8);
-    margin: 0px auto 15px auto;
+    color: rgba(14,32,40,.8);
+    margin: 0 auto 15px
 }
 
 #sidebar h2:first-child {
-    margin: 0 auto 10px auto;
+    margin: 0 auto 10px
 }
 
 #sidebar a {
     display: block;
     color: #ff344a;
-    text-decoration: none;
+    text-decoration: none
 }
 
 #sidebar a:hover {
     text-decoration: underline;
     transform: scale(1.05);
-    transition: .2s;
+    transition: .2s
 }
 
 #sidebar .card-title {
-    color: rgba(14, 32, 40, 0.8);
+    color: rgba(14,32,40,.8)
 }
 
 #sidebar .card {
+    display: block;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px
 }
 
 #sidebar .card img {
     width: 160px;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 #sidebar .card p {
     margin: 5px 0;
     font-size: 1rem;
-    color: #ff344a;
+    color: #ff344a
 }
 
 .clearfix {
-    clear: both;
+    clear: both
 }
 
-.donate-block {
-    list-style: none;
-    text-align: left;
+.modal-input {
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
-.donate-block a {
-    text-decoration: none;
+.modal-input p {
+    margin-top: 5px;
 }
 
-.donate-block a:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 992px) {
+@media screen and (max-width:992px) {
     #content {
         margin-right: 0;
-        padding: 10px;
+        padding: 10px
     }
 
     #sidebar {
-        display: none;
+        display: none
+    }
+
+    #projects {
+        box-sizing: border-box
+    }
+
+    #projects #pt-wrap .work,#projects #pt-wrap .work .q,#projects #pt-wrap .work .q .hoverdesc {
+        width: 160px;
+        height: 160px
+    }
+
+    #projects #pt-wrap .work .q .hoverdesc p {
+        font-size: .8rem
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width:720px) {
     #main {
-        margin-top: 0;
+        margin-top: 0
     }
 
     #main #content {
-        padding: 10px;
+        padding: 10px
+    }
+
+    #projects {
+        box-sizing: border-box
+    }
+
+    #projects #pt-wrap {
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    #projects #pt-wrap .work {
+        width: 200px;
+        height: 200px;
+        margin: 10px
+    }
+
+    #projects #pt-wrap .work .q,#projects #pt-wrap .work .q .hoverdesc {
+        width: 200px;
+        height: 200px
+    }
+
+    #projects #pt-wrap .work .q .hoverdesc p {
+        font-size: .8rem
     }
 
     .longname {
-        display: none;
+        display: none
     }
 
     #content h2.shortname {
         display: block;
-        margin: 20px 0 15px 0;
+        margin: 20px 0 15px
     }
 
     .news {
@@ -470,40 +572,59 @@ header {
         min-height: 400px;
         max-height: 2000px;
         height: 100%;
-        border: none;
+        border: none
     }
 
     .news img {
         margin: 0 auto;
-        float: none;
+        float: none
     }
 
-    .news .title,
-  .news .date {
-        text-align: center;
+    .news .date,.news .title {
+        text-align: center
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width:576px) {
     #content {
         margin-right: 0;
-        padding: 5px;
+        padding: 5px
     }
 
-    #content .news {
-        text-align: center;
-    }
-
-    #content img {
-        text-align: center;
+    #content .news,#content img {
+        text-align: center
     }
 
     #content .news-content .title {
-        font-size: 0.98rem;
+        font-size: .98rem
+    }
+
+    #projects {
+        display: none;
+    }
+
+    #projects #pt-wrap .work {
+        width: 260px;
+        height: 260px;
+        margin: 10px
+    }
+
+    #projects #pt-wrap .work .q,#projects #pt-wrap .work .q .hoverdesc {
+        width: 260px;
+        height: 260px
+    }
+
+    #projects #pt-wrap .work .q .hoverdesc p {
+        font-size: 1rem
     }
 
     #sidebar {
-        display: none;
+        display: none
+    }
+
+    #projects #pt-wrap {
+        flex-wrap: wrap;
+        justify-content: center
     }
 }
 
@@ -514,34 +635,36 @@ header {
     align-items: center;
     flex-wrap: wrap;
     padding: 10px;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .about-block {
     margin: 5px;
     min-width: 250px;
     width: 350px;
-    max-width: 400px;
+    max-width: 400px
 }
 
 .forms {
     width: 100%;
-    padding: 10px;
-    display: block;
+    padding: 10px
+}
+
+.forms,form {
+    display: block
 }
 
 form {
-    display: block;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 form input {
-    width: 100%;
+    width: 100%
 }
 
 form label {
-    color: rgba(14, 32, 40, 0.8);
+    color: rgba(14,32,40,.8)
 }
 
 form input[type=submit] {
@@ -554,21 +677,20 @@ form input[type=submit] {
     margin: 0 auto;
     border-radius: 0;
     cursor: pointer;
-    opacity: 0.9;
+    opacity: .9
 }
 
 form input[type=submit]:hover {
     opacity: 1;
-    transition: .3s;
+    transition: .3s
 }
 
-form input,
-form textarea {
+form input,form textarea {
     width: 100%;
     padding: 10px 5px;
     border-radius: 6px;
     border: 2px solid #ccc;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 footer {
@@ -576,46 +698,46 @@ footer {
     width: 100%;
     background: #fff;
     border-top: 1px solid #ddd;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 footer p {
-    color: rgba(14, 32, 40, 0.8);
-    text-align: center;
+    color: rgba(14,32,40,.8);
+    text-align: center
 }
 
 footer #footer-wrap {
     display: flex;
-    justify-content: space-around !important;
+    justify-content: space-around!important;
     justify-content: center;
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 footer #footer-wrap .col {
     padding: 20px;
     margin: 0;
-    list-style: none;
+    list-style: none
 }
 
 footer #footer-wrap .col li {
     text-align: center;
-    color: rgba(14, 32, 40, 0.8);
+    color: rgba(14,32,40,.8);
     margin: 5px;
-    line-height: 40px;
+    line-height: 40px
 }
 
 footer #footer-wrap .col li h3 {
-    margin: 0;
+    margin: 0
 }
 
 footer #footer-wrap .col li a {
     color: #ff344a;
-    text-decoration: none;
+    text-decoration: none
 }
 
 footer #footer-wrap .col li a:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 footer .social {
@@ -623,46 +745,46 @@ footer .social {
     justify-content: space-around;
     align-items: center;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 footer .social a {
     display: block;
-    margin: 5px;
+    margin: 5px
 }
 
 footer .social img {
-    width: 50px;
-    filter: grayscale(1);
+    width: 30px;
+    filter: grayscale(1)
 }
 
 footer .social img:hover {
     filter: grayscale(0);
-    transition: .3s;
+    transition: .3s
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width:992px) {
     #footer-wrap {
-        flex-wrap: wrap;
+        flex-wrap: wrap
     }
 
     #footer-wrap .col {
         padding: 0;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #ddd
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width:720px) {
     footer #footer-wrap {
-        flex-direction: column;
+        flex-direction: column
     }
 
     footer #footer-wrap .col {
         padding: 0;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #ddd
     }
 
     footer #footer-wrap .social img {
-        filter: grayscale(0);
+        filter: grayscale(0)
     }
 }
