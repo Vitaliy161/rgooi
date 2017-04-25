@@ -456,12 +456,20 @@ header {
 }
 
 #sidebar a {
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    text-decoration: underline;
+}
+
+#sidebar a.card {
     display: block;
     color: #ff344a;
     text-decoration: none
 }
 
-#sidebar a:hover {
+#sidebar a.card:hover {
     text-decoration: underline;
     transform: scale(1.05);
     transition: .2s
@@ -499,6 +507,16 @@ header {
 
 .modal-input p {
     margin-top: 5px;
+}
+
+.quote {
+    display: block;
+    font-style: italic;
+}
+
+.tyimg {
+    max-width: 400px;
+    width: 100%;
 }
 
 @media screen and (max-width:992px) {
